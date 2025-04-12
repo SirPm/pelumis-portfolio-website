@@ -14,17 +14,17 @@ export const About = () => {
 				id="about"
 				className={`relative overflow-hidden global-container ${styles["about-section"]}`}
 			>
-				<div className="section-container grid grid-cols-2 gap-16 items-center">
+				<div className="section-container grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16 items-center">
 					<div>
 						<div className="text-[0.9rem] uppercase tracking-[2px] text-teal mb-4 font-semibold">
 							About
 						</div>
-						<h2 className="font-bold text-4xl mb-6 leading-10 tracking-[-0.5px]">
+						<h2 className="font-bold text-3xl md:text-4xl mb-6 leading-10 tracking-[-0.5px]">
 							Solving complex&nbsp;
 							<span className="text-teal">problems</span> with
 							elegant solutions
 						</h2>
-						<p className="text-xl font-light mb-6">
+						<p className="text-[1.1rem] md:text-xl font-light mb-6">
 							I'm a full-stack developer specializing in creating
 							exceptional digital experiences that combine
 							technical excellence with user-centered design.
