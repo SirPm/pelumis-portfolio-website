@@ -1,0 +1,48 @@
+.projects-section::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: radial-gradient(
+			circle at 70% 30%,
+			rgba(12, 255, 225, 0.03) 0%,
+			transparent 25%
+		),
+		radial-gradient(
+			circle at 30% 70%,
+			rgba(255, 46, 147, 0.02) 0%,
+			transparent 25%
+		);
+	z-index: 0;
+	pointer-events: none;
+}
+
+.project-link {
+	display: inline-block;
+	color: var(--teal);
+	font-size: 0.9rem;
+	font-weight: 600;
+	text-decoration: none;
+	position: relative;
+	transition: all 0.3s ease;
+}
+
+.project-link::after {
+	content: "";
+	position: absolute;
+	bottom: -2px;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	background-color: var(--teal);
+	transform: scaleX(0);
+	transform-origin: right;
+	transition: transform 0.3s ease;
+}
+
+.project-link:hover::after {
+	transform: scaleX(1);
+	transform-origin: left;
+}
