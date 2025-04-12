@@ -7,9 +7,9 @@ export const Projects = () => {
 		<div className="bg-dark-charcoal">
 			<section
 				id="projects"
-				className={`global-container p-[4rem,0] md:py-24 md:px-0 relative overflow-hidden ${styles["projects-section"]}`}
+				className={`global-container relative overflow-hidden ${styles["projects-section"]}`}
 			>
-				<div className="relative z-[1]">
+				<div className="relative z-[1] section-container">
 					<div className="mb-12 text-center">
 						<h2 className="font-bold text-4xl mb-3 tracking-[-0.5px]">
 							Featured <span className="text-teal">Projects</span>

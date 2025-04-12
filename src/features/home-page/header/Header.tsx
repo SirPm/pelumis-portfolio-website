@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { Button } from "../../styled-components/button";
+import { Button } from "../../../components/styled-components/button";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 import {
@@ -75,41 +75,44 @@ export const Header = () => {
 				</DesktopNav>
 			</nav>
 
-			<div className="w-[90%] max-w-[1200px] mt-32 mb-0 mx-auto py-0 px-8 relative z-[1]">
-				<Title>
-					I'm <span className="text-teal">Pelumi Odumosu</span>
-					<br />
-					I create digital experiences <br />
-					with&nbsp;
-					<span className="inline-block text-teal relative">
-						purpose
-					</span>
-					&nbsp;and precision
-				</Title>
-				<TagLine>
-					Full-stack developer specializing in&nbsp;
-					<span className="font-medium text-magenta">
-						B2B solutions
-					</span>
-					&nbsp;and&nbsp;
-					<span className="font-medium text-magenta">
-						accessible web applications
-					</span>
-					&nbsp; that deliver exceptional value and user experience.
-				</TagLine>
-				<div className="flex flex-col w-full max-w-[70%] md:max-w-fit md:flex-row mt-8 gap-6">
-					<Button
-						variant="primary"
-						className="w-full md:w-fit"
-					>
-						<a href="#projects">View My Projects</a>
-					</Button>
-					<Button
-						variant="secondary"
-						className="w-full md:w-fit"
-					>
-						<a href="#contact">Get In Touch</a>
-					</Button>
+			<div className="global-container">
+				<div className="section-container mt-32 mb-0 !py-0 relative z-[1]">
+					<Title>
+						I'm <span className="text-teal">Pelumi Odumosu</span>
+						<br />
+						I create digital experiences <br />
+						with&nbsp;
+						<span className="inline-block text-teal relative">
+							purpose
+						</span>
+						&nbsp;and precision
+					</Title>
+					<TagLine>
+						Full-stack developer specializing in&nbsp;
+						<span className="font-medium text-magenta">
+							B2B solutions
+						</span>
+						&nbsp;and&nbsp;
+						<span className="font-medium text-magenta">
+							accessible web applications
+						</span>
+						&nbsp; that deliver exceptional value and user
+						experience.
+					</TagLine>
+					<div className="flex flex-col w-full max-w-[70%] md:max-w-fit md:flex-row mt-8 gap-6">
+						<Button
+							variant="primary"
+							className="w-full md:w-fit"
+						>
+							<a href="#projects">View My Projects</a>
+						</Button>
+						<Button
+							variant="secondary"
+							className="w-full md:w-fit"
+						>
+							<a href="#contact">Get In Touch</a>
+						</Button>
+					</div>
 				</div>
 			</div>
 
