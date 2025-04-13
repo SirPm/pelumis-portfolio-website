@@ -15,6 +15,10 @@ export const Button = styled("button")<IButtonProps>`
 	text-decoration: none;
 	letter-spacing: 0.3px;
 
+	@media screen and (max-width: 768px) {
+		font-size: 14px;
+	}
+
 	${(props) =>
 		props.variant === "primary"
 			? `

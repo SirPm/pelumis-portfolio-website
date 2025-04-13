@@ -1,17 +1,12 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { Button } from "../../../components/styled-components/button";
-import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
-import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 import {
 	DesktopNav,
 	StyledLink,
 	Title,
 	TagLine,
-	ToggleMenu,
 	MobileNav,
-	MobileNavHeader,
-	CloseButton,
 	MobileNavLinks,
 	MobileNavItem,
 	MobileNavNumber,
@@ -19,8 +14,11 @@ import {
 	MobileNavButton,
 	Overlay,
 	ScrollIndicator,
+	Hamburger,
+	HamburgerLine,
 } from "./styled-components";
 import styles from "./Header.module.css";
+import { AnimatedLogo } from "@/components/AnimatedLogo";
 
 // Navigation links array for reuse
 const navLinks = [
@@ -57,12 +55,23 @@ export const Header = () => {
 		<header
 			className={`h-screen w-full flex items-center flex-col relative overflow-hidden ${styles["header-container"]}`}
 		>
-			<nav className="flex justify-between items-center py-8 global-container">
+			<Hamburger
+				aria-label="Toggle mobile menu"
+				aria-expanded={isMenuOpen}
+				onClick={toggleMenu}
+			>
+				<HamburgerLine isActive={isMenuOpen} />
+				<HamburgerLine isActive={isMenuOpen} />
+				<HamburgerLine isActive={isMenuOpen} />
+			</Hamburger>
+
+			{/* Desktop Navigation Menu */}
+			<nav className="flex justify-between items-center pt-8 global-container">
 				<a
 					href="/"
 					className="font-bold text-[1.25rem] text-silver no-underline flex items-center gap-2 cursor-pointer"
 				>
-					dev<span className="text-teal">.</span>portfolio
+					<AnimatedLogo />
 				</a>
 				<DesktopNav className="flex list-none gap-8">
 					{navLinks.map((link, index) => (
@@ -75,8 +84,45 @@ export const Header = () => {
 				</DesktopNav>
 			</nav>
 
-			<div className="global-container">
-				<div className="section-container mt-32 mb-0 !py-0 relative z-[1]">
+			{/* Mobile Navigation Menu */}
+			<MobileNav isOpen={isMenuOpen}>
+				<MobileNavLinks>
+					<ol>
+						{navLinks.map((link, index) => (
+							<MobileNavItem key={index}>
+								<MobileNavNumber>{`0${
+									index + 1
+								}.`}</MobileNavNumber>
+								<MobileNavLink
+									href={link.href}
+									onClick={closeMenu}
+								>
+									{link.text}
+								</MobileNavLink>
+							</MobileNavItem>
+						))}
+					</ol>
+					<MobileNavButton>
+						<Button
+							variant="primary"
+							onClick={closeMenu}
+						>
+							<a href="#contact">Get In Touch</a>
+						</Button>
+					</MobileNavButton>
+				</MobileNavLinks>
+			</MobileNav>
+
+			{/* Overlay for when mobile menu is open */}
+			<Overlay
+				isOpen={isMenuOpen}
+				onClick={closeMenu}
+			/>
+
+			<div
+				className={`global-container flex items-center h-[calc(100vh-176px)]`}
+			>
+				<div className="section-container !p-0 relative z-[1]">
 					<Title>
 						I'm <span className="text-teal">Pelumi Odumosu</span>
 						<br />
@@ -115,60 +161,6 @@ export const Header = () => {
 					</div>
 				</div>
 			</div>
-
-			<ToggleMenu
-				role="button"
-				tabIndex={0}
-				aria-label="Toggle mobile menu"
-				onClick={toggleMenu}
-				aria-expanded={isMenuOpen}
-			>
-				<MenuRoundedIcon />
-			</ToggleMenu>
-
-			{/* Mobile Navigation Menu */}
-			<MobileNav isOpen={isMenuOpen}>
-				<MobileNavHeader>
-					<CloseButton
-						type="button"
-						onClick={closeMenu}
-						aria-label="Close menu"
-					>
-						<CloseRoundedIcon />
-					</CloseButton>
-				</MobileNavHeader>
-				<MobileNavLinks>
-					<ol>
-						{navLinks.map((link, index) => (
-							<MobileNavItem key={index}>
-								<MobileNavNumber>{`0${
-									index + 1
-								}.`}</MobileNavNumber>
-								<MobileNavLink
-									href={link.href}
-									onClick={closeMenu}
-								>
-									{link.text}
-								</MobileNavLink>
-							</MobileNavItem>
-						))}
-					</ol>
-					<MobileNavButton>
-						<Button
-							variant="primary"
-							onClick={closeMenu}
-						>
-							<a href="#contact">Get In Touch</a>
-						</Button>
-					</MobileNavButton>
-				</MobileNavLinks>
-			</MobileNav>
-
-			{/* Overlay for when mobile menu is open */}
-			<Overlay
-				isOpen={isMenuOpen}
-				onClick={closeMenu}
-			/>
 
 			<ScrollIndicator>
 				<span>Scroll</span>

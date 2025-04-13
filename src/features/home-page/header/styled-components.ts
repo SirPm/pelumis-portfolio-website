@@ -44,6 +44,10 @@ export const Title = styled("h1")`
 	line-height: 1.2;
 	margin-bottom: 1.5rem;
 	letter-spacing: -0.5px;
+
+	@media screen and (max-width: 600px) {
+		font-size: 30px;
+	}
 `;
 
 export const TagLine = styled("p")`
@@ -56,27 +60,9 @@ export const TagLine = styled("p")`
 	@media screen and (max-width: 768px) {
 		max-width: 100%;
 	}
-`;
 
-export const ToggleMenu = styled("div")`
-	position: absolute;
-	top: 2rem;
-	right: 2rem;
-	align-items: center;
-	gap: 0.5rem;
-	padding: 0.5rem 0.75rem;
-	background-color: rgba(240, 240, 240, 0.06);
-	border-radius: 8px;
-	cursor: pointer;
-	display: none;
-	z-index: 15;
-
-	&:hover {
-		background-color: rgba(240, 240, 240, 0.1);
-	}
-
-	@media screen and (max-width: 768px) {
-		display: flex;
+	@media screen and (max-width: 600px) {
+		font-size: 14px;
 	}
 `;
 
@@ -116,27 +102,6 @@ export const MobileNav = styled("aside")<{ isOpen: boolean }>`
 	transform: ${(props) =>
 		props.isOpen ? "translateX(0)" : "translateX(100%)"};
 	transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-`;
-
-export const MobileNavHeader = styled("div")`
-	display: flex;
-	justify-content: flex-end;
-	margin-bottom: 3rem;
-`;
-
-export const CloseButton = styled("button")`
-	background: transparent;
-	border: none;
-	color: var(--silver);
-	padding: 0.5rem;
-	cursor: pointer;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-
-	&:hover {
-		color: var(--teal);
-	}
 `;
 
 export const MobileNavLinks = styled("nav")`
@@ -190,4 +155,60 @@ export const Overlay = styled("div")<{ isOpen: boolean }>`
 	backdrop-filter: blur(4px);
 	-webkit-backdrop-filter: blur(4px);
 	display: ${(props) => (props.isOpen ? "block" : "none")};
+`;
+
+export const Hamburger = styled.button`
+	display: none;
+	position: fixed;
+	top: 52px;
+	right: 2rem;
+	width: 30px;
+	height: 20px;
+	cursor: pointer;
+	z-index: 1000;
+	background-color: transparent;
+	border: none;
+
+	&:hover span {
+		background-color: var(--teal);
+	}
+
+	@media screen and (max-width: 768px) {
+		display: block;
+	}
+`;
+
+export const HamburgerLine = styled.span<{ isActive: boolean }>`
+	background-color: #ffffff;
+	display: block;
+	height: 2px;
+	border-radius: 4px;
+	width: 100%;
+	position: absolute;
+	transition: all 0.3s ease;
+
+	&:nth-of-type(1) {
+		top: 0;
+		${({ isActive }) =>
+			isActive &&
+			`
+      transform: rotate(45deg);
+      top: 8.5px;
+    `}
+	}
+
+	&:nth-of-type(2) {
+		top: 8.5px;
+		${({ isActive }) => isActive && `opacity: 0;`}
+	}
+
+	&:nth-of-type(3) {
+		top: 17px;
+		${({ isActive }) =>
+			isActive &&
+			`
+      transform: rotate(-45deg);
+      top: 8.5px;
+    `}
+	}
 `;
