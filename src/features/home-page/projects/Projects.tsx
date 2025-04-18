@@ -2,8 +2,8 @@ import React from "react";
 import { PROJECT_CATEGORIES, ProjectCategoryTextMap, PROJECTS } from "./consts";
 import { HiOutlineExternalLink } from "react-icons/hi";
 import { BsGithub } from "react-icons/bs";
+import Link from "next/link";
 import styles from "./Projects.module.css";
-import { Animated3DCard } from "@/components/card/Animated3DCard";
 
 export const Projects = () => {
 	return (
@@ -108,7 +108,7 @@ export const Projects = () => {
 										)} */}
 										<div className="flex gap-3 items-center mt-auto">
 											{githubLink && (
-												<a
+												<Link
 													href={githubLink}
 													target="_blank"
 													rel="noopener noreferrer"
@@ -118,9 +118,9 @@ export const Projects = () => {
 													}
 												>
 													<BsGithub className="w-6 h-6" />
-												</a>
+												</Link>
 											)}
-											<a
+											<Link
 												href={link}
 												target="_blank"
 												rel="noopener noreferrer"
@@ -130,7 +130,7 @@ export const Projects = () => {
 												}
 											>
 												<HiOutlineExternalLink className="w-7 h-7" />
-											</a>
+											</Link>
 										</div>
 									</div>
 								</div>

@@ -1,5 +1,6 @@
 import { Box } from "@mui/material";
 import styled from "@emotion/styled";
+import Link from "next/link";
 
 export const DesktopNav = styled("ul")`
 	@media screen and (max-width: 768px) {
@@ -7,7 +8,7 @@ export const DesktopNav = styled("ul")`
 	}
 `;
 
-export const StyledLink = styled("a")`
+export const StyledLink = styled(Link)`
 	color: var(--silver);
 	text-decoration: none;
 	font-weight: 500;
@@ -78,6 +79,7 @@ export const ScrollIndicator = styled(Box)`
 	opacity: 0.7;
 	transition: all 0.3s ease;
 	cursor: pointer;
+	color: var(--teal);
 
 	&:hover {
 		opacity: 1;

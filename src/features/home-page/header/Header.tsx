@@ -18,6 +18,7 @@ import {
 	HamburgerLine,
 } from "./styled-components";
 import styles from "./Header.module.css";
+import Link from "next/link";
 import { AnimatedLogo } from "@/components/AnimatedLogo";
 
 // Navigation links array for reuse
@@ -25,8 +26,10 @@ const navLinks = [
 	{ href: "#projects", text: "Projects" },
 	{ href: "#about", text: "About" },
 	{ href: "#experience", text: "Experience" },
-	{ href: "#contact", text: "Contact" },
+	// { href: "#contact", text: "Contact" },
 ];
+
+const MY_EMAIL = "odumosuoluwapm@gmail.com";
 
 export const Header = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -67,12 +70,12 @@ export const Header = () => {
 
 			{/* Desktop Navigation Menu */}
 			<nav className="flex justify-between items-center pt-8 global-container">
-				<a
+				<Link
 					href="/"
 					className="font-bold text-[1.25rem] text-silver no-underline flex items-center gap-2 cursor-pointer"
 				>
 					<AnimatedLogo />
-				</a>
+				</Link>
 				<DesktopNav className="flex list-none gap-8">
 					{navLinks.map((link, index) => (
 						<li key={index}>
@@ -107,7 +110,9 @@ export const Header = () => {
 							variant="primary"
 							onClick={closeMenu}
 						>
-							<a href="#contact">Get In Touch</a>
+							<Link href={`mailto:${MY_EMAIL}`}>
+								Get In Touch
+							</Link>
 						</Button>
 					</MobileNavButton>
 				</MobileNavLinks>
@@ -123,23 +128,24 @@ export const Header = () => {
 				className={`global-container flex items-center h-[calc(100vh-176px)]`}
 			>
 				<div className="section-container !p-0 relative z-[1]">
-					<Title>
-						I'm <span className="text-teal">Pelumi Odumosu</span>
+					<Title className="subtle-glitch">
+						I'm{" "}
+						<span className="gradient-text">Pelumi Odumosu</span>
 						<br />
 						I create digital experiences <br />
 						with&nbsp;
-						<span className="inline-block text-teal relative">
+						<span className="inline-block gradient-text relative">
 							purpose
 						</span>
 						&nbsp;and precision
 					</Title>
 					<TagLine>
 						Frontend developer specializing in&nbsp;
-						<span className="font-medium text-magenta">
+						<span className="font-medium text-neon-pink">
 							B2B solutions
 						</span>
 						&nbsp;and&nbsp;
-						<span className="font-medium text-magenta">
+						<span className="font-medium text-matrix-green">
 							web applications
 						</span>
 						&nbsp; that deliver exceptional value and user
@@ -150,13 +156,15 @@ export const Header = () => {
 							variant="primary"
 							className="w-full md:w-fit"
 						>
-							<a href="#projects">View My Projects</a>
+							<Link href="#projects">View My Projects</Link>
 						</Button>
 						<Button
 							variant="secondary"
 							className="w-full md:w-fit"
 						>
-							<a href="#contact">Get In Touch</a>
+							<Link href={`mailto:${MY_EMAIL}`}>
+								Get In Touch
+							</Link>
 						</Button>
 					</div>
 				</div>
