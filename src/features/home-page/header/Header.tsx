@@ -129,7 +129,7 @@ export const Header = () => {
 			>
 				<div className="section-container !p-0 relative z-[1]">
 					<Title className="subtle-glitch">
-						I'm{" "}
+						I&apos;m&nbsp;
 						<span className="gradient-text">Pelumi Odumosu</span>
 						<br />
 						I create digital experiences <br />

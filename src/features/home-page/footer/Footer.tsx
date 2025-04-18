@@ -31,7 +31,7 @@ export const Footer = () => {
 		if (isIntersecting && scrollingDown && footerRef.current) {
 			footerRef.current.scrollIntoView({ behavior: "smooth" });
 		}
-	}, [isIntersecting, scrollingDown]);
+	}, [isIntersecting, scrollingDown, footerRef]);
 
 	return (
 		<footer

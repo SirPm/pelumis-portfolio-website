@@ -26,23 +26,25 @@ export const About = () => {
 							elegant solutions
 						</h2>
 						<p className="text-[1.1rem] md:text-xl font-light mb-6">
-							I'm a frontend engineer specializing in creating
-							exceptional digital experiences that combine
-							technical excellence with user-centered design.
+							I&apos;m a frontend engineer specializing in
+							creating exceptional digital experiences that
+							combine technical excellence with user-centered
+							design.
 						</p>
 
 						<div className="mb-8">
 							<p className="mb-4 leading-[1.7] text-[1rem] text-silver opacity-90">
-								With over 4 years of industry experience, I've
-								developed enterprise-grade applications with a
-								focus on accessibility, performance, and
-								scalability. My approach combines strategic
-								thinking with technical expertise to deliver
-								solutions that drive business growth.
+								With over 4 years of industry experience,
+								I&apos;ve developed enterprise-grade
+								applications with a focus on accessibility,
+								performance, and scalability. My approach
+								combines strategic thinking with technical
+								expertise to deliver solutions that drive
+								business growth.
 							</p>
 							<p className="mb-4 leading-[1.7] text-[1rem] text-silver opacity-90">
-								I'm particularly passionate about making the web
-								accessible to everyone.
+								I&apos;m particularly passionate about making
+								the web accessible to everyone.
 								{/* and creating B2B
 								solutions that transform how businesses operate */}
 							</p>

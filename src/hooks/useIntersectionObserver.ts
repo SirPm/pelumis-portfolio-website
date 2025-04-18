@@ -7,11 +7,7 @@ import { useEffect, useRef, useState } from "react";
  * @returns {[React.RefObject<HTMLElement>, boolean]} - A ref to attach to the target element and a boolean indicating if the element is in the viewport.
  */
 
-interface IntersectionObserverOptions extends IntersectionObserverInit {}
-
-export const useIntersectionObserver = (
-	options: IntersectionObserverOptions
-) => {
+export const useIntersectionObserver = (options: IntersectionObserverInit) => {
 	const [isIntersecting, setIsIntersecting] = useState(false);
 	const ref = useRef<HTMLElement>(null);
 
@@ -30,9 +26,10 @@ export const useIntersectionObserver = (
 			observer.observe(ref.current);
 		}
 
+		const currentRef = ref.current;
 		return () => {
-			if (ref.current) {
-				observer.unobserve(ref.current);
+			if (currentRef) {
+				observer.unobserve(currentRef);
 			}
 		};
 	}, [options]);

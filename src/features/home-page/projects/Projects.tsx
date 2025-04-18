@@ -39,8 +39,8 @@ export const Projects = () => {
 				<div className="relative z-[1] section-container">
 					<div className="mb-12 text-center">
 						<h2 className="font-bold text-4xl mb-3 tracking-[-0.5px]">
-							<span className="text-teal">Projects</span> I've
-							Worked On
+							<span className="text-teal">Projects</span>{" "}
+							I&apos;ve Worked On
 						</h2>
 						<p className="text-[1.1rem] text-silver opacity-80 w-full max-w-[600px] my-0 mx-auto">
 							Solutions designed with purpose and built with
@@ -82,9 +82,7 @@ export const Projects = () => {
 									image,
 									description,
 									techStack,
-									metrics,
 									link,
-									isFeatured,
 									githubLink,
 								}) => (
 									<div
