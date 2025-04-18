@@ -6,12 +6,12 @@ export const Footer = () => {
 	const currentYear = new Date().getFullYear();
 
 	return (
-		<footer className="footer-container w-full text-text-primary py-12 relative overflow-hidden">
+		<footer className="w-full text-text-primary py-12 relative overflow-hidden footer-container">
 			{/* Background gradient shapes */}
-			<div className="footer-shapes">
-				<div className="footer-shape footer-shape-1"></div>
-				<div className="footer-shape footer-shape-2"></div>
-				<div className="footer-shape footer-shape-3"></div>
+			<div className="absolute inset-0 overflow-hidden">
+				<div className="absolute w-[200px] h-[200px] rounded-full blur-[40px] opacity-10 bg-primary top-[-50px] right-[-50px] animate-float" />
+				<div className="absolute w-[150px] h-[150px] rounded-full blur-[40px] opacity-10 bg-secondary bottom-[-30px] left-[-30px] animate-float-reverse" />
+				<div className="absolute w-[100px] h-[100px] rounded-full blur-[40px] opacity-10 bg-tertiary bottom-[50px] right-[50px] animate-float-slow" />
 			</div>
 
 			<div className="footer-content container mx-auto px-4">
@@ -56,7 +56,7 @@ export const Footer = () => {
 						</span>
 						<span className="text-xs text-text-secondary">•</span>
 						<span className="text-xs text-text-secondary">
-							Last updated: 2025
+							Last updated: {new Date().getFullYear()}
 						</span>
 					</div>
 				</div>
