@@ -434,7 +434,8 @@
 }
 
 @keyframes twinkle {
-	0%, 100% {
+	0%,
+	100% {
 		opacity: 0.2;
 		transform: scale(1);
 	}
@@ -530,4 +531,84 @@
 		height: 100vh;
 		opacity: 0;
 	}
+}
+
+/* Scroll-triggered animations */
+.fade-in {
+	opacity: 0;
+	transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+	opacity: 1;
+}
+
+.slide-up {
+	opacity: 0;
+	transform: translateY(20px);
+	transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.slide-up.visible {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.slide-left {
+	opacity: 0;
+	transform: translateX(20px);
+	transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.slide-left.visible {
+	opacity: 1;
+	transform: translateX(0);
+}
+
+.slide-right {
+	opacity: 0;
+	transform: translateX(-20px);
+	transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.slide-right.visible {
+	opacity: 1;
+	transform: translateX(0);
+}
+
+.scale-in {
+	opacity: 0;
+	transform: scale(0.95);
+	transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scale-in.visible {
+	opacity: 1;
+	transform: scale(1);
+}
+
+@keyframes growLine {
+	from {
+		transform: scaleY(0);
+	}
+	to {
+		transform: scaleY(1);
+	}
+}
+
+@keyframes growWidth {
+	from {
+		transform: scaleX(0);
+	}
+	to {
+		transform: scaleX(1);
+	}
+}
+
+.animate-experience-timeline > .experience-timeline::before {
+	animation: growLine 3s ease forwards;
+}
+
+.animate-experience-timeline .experience-milestone-line {
+	animation: growWidth 0.8s ease forwards;
 }

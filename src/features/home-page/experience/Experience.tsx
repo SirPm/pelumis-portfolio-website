@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./Experience.module.css";
 import { EXPEERIENCE_DATA } from "./consts";
+import { AnimateOnScroll } from "@/components/AnimateOnScroll";
 
 export const Experience = () => {
 	return (
@@ -24,54 +25,70 @@ export const Experience = () => {
 						</p>
 					</div>
 
-					<div className={styles["timeline"]}>
-						{EXPEERIENCE_DATA.map(
-							({
-								id,
-								company,
-								jobTitle,
-								startDate,
-								endDate,
-								description,
-								techStack,
-							}) => (
-								<div
-									className={styles["timeline-item"]}
-									key={id}
-								>
-									<div className={styles["timeline-content"]}>
+					<AnimateOnScroll animationClass="animate-experience-timeline">
+						<div
+							className={`${styles["timeline"]} experience-timeline`}
+						>
+							{EXPEERIENCE_DATA.map(
+								({
+									id,
+									company,
+									jobTitle,
+									startDate,
+									endDate,
+									description,
+									techStack,
+								}) => (
+									<div
+										className={styles["timeline-item"]}
+										key={id}
+									>
 										<div
-											className={styles["timeline-date"]}
+											className={
+												styles["timeline-content"]
+											}
 										>
-											{startDate} - {endDate}
-										</div>
-										<h3>{jobTitle}</h3>
-										<h4>{company}</h4>
-										<p>{description}</p>
-										<div
-											className={styles["timeline-tags"]}
-										>
-											{techStack.map((tech, index) => (
-												<span key={index}>{tech}</span>
-											))}
-										</div>
-										<div className={styles["milestone"]}>
 											<div
 												className={
-													styles["milestone-dot"]
+													styles["timeline-date"]
 												}
-											></div>
+											>
+												{startDate} - {endDate}
+											</div>
+											<h3>{jobTitle}</h3>
+											<h4>{company}</h4>
+											<p>{description}</p>
 											<div
 												className={
-													styles["milestone-line"]
+													styles["timeline-tags"]
 												}
-											></div>
+											>
+												{techStack.map(
+													(tech, index) => (
+														<span key={index}>
+															{tech}
+														</span>
+													)
+												)}
+											</div>
+											<div
+												className={styles["milestone"]}
+											>
+												<div
+													className={
+														styles["milestone-dot"]
+													}
+												></div>
+												<div
+													className={`${styles["milestone-line"]} experience-milestone-line`}
+												></div>
+											</div>
 										</div>
 									</div>
-								</div>
-							)
-						)}
-					</div>
+								)
+							)}
+						</div>
+					</AnimateOnScroll>
 				</div>
 
 				<div className={styles["experience-bg"]}>
