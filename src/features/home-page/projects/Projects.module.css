@@ -19,9 +19,33 @@
 	pointer-events: none;
 }
 
+.project-description {
+	max-height: 74px;
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	text-overflow: ellipsis;
+	position: relative;
+}
+
+/* .project-description::after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	height: 20px;
+	background: linear-gradient(
+		to bottom,
+		rgba(255, 255, 255, 0),
+		rgba(255, 255, 255, 1)
+	);
+	pointer-events: none;
+} */
+
 .project-link {
 	display: inline-block;
-	color: var(--teal);
 	font-size: 0.9rem;
 	font-weight: 600;
 	text-decoration: none;
@@ -29,7 +53,11 @@
 	transition: all 0.3s ease;
 }
 
-.project-link::after {
+.project-link:hover {
+	color: var(--teal);
+}
+
+/* .project-link::after {
 	content: "";
 	position: absolute;
 	bottom: -2px;
@@ -45,4 +73,4 @@
 .project-link:hover::after {
 	transform: scaleX(1);
 	transform-origin: left;
-}
+} */

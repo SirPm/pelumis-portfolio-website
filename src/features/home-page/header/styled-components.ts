@@ -168,6 +168,8 @@ export const Hamburger = styled.button`
 	z-index: 1000;
 	background-color: transparent;
 	border: none;
+	padding: 6px;
+	filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.3));
 
 	&:hover span {
 		background-color: var(--teal);
@@ -186,6 +188,7 @@ export const HamburgerLine = styled.span<{ isActive: boolean }>`
 	width: 100%;
 	position: absolute;
 	transition: all 0.3s ease;
+	box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
 
 	&:nth-of-type(1) {
 		top: 0;

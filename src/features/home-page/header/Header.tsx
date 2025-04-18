@@ -134,13 +134,13 @@ export const Header = () => {
 						&nbsp;and precision
 					</Title>
 					<TagLine>
-						Full-stack developer specializing in&nbsp;
+						Frontend developer specializing in&nbsp;
 						<span className="font-medium text-magenta">
 							B2B solutions
 						</span>
 						&nbsp;and&nbsp;
 						<span className="font-medium text-magenta">
-							accessible web applications
+							web applications
 						</span>
 						&nbsp; that deliver exceptional value and user
 						experience.

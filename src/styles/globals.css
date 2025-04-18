@@ -25,11 +25,13 @@
 }
 
 :root {
-	--charcoal: #1a1a2e;
+	/* --charcoal: #1a1a2e; */
+	--charcoal: #0b1012;
 	--teal: #0cffe1;
 	--magenta: #ff2e93;
 	--silver: #f0f0f0;
 	--dark-charcoal: #0f0f1a;
+	/* --dark-charcoal: #0c0021; */
 }
 
 @layer base {

@@ -5,6 +5,7 @@ export enum ProjectCategory {
 	ECOMMERCE = "ecommerce",
 	FINTECH = "fintech",
 	SAAS = "saas",
+	UI_UX = "ui/ux",
 }
 
 export interface IProjectCategory {
@@ -14,7 +15,7 @@ export interface IProjectCategory {
 }
 
 export interface IProject {
-	id: number;
+	id: string;
 	name: string;
 	category: ProjectCategory;
 	image: string;
@@ -26,4 +27,5 @@ export interface IProject {
 	}[];
 	link: string;
 	isFeatured?: boolean;
+	githubLink?: string;
 }
