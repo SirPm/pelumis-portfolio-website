@@ -6,6 +6,7 @@ import {
 	FRONT_END_TECH_SKILLS,
 } from "./consts";
 import { TechSkill } from "@/components/tech-skill/TechSkill";
+import { AnimateOnScroll } from "@/components/AnimateOnScroll";
 
 export const About = () => {
 	return (
@@ -70,7 +71,10 @@ export const About = () => {
 					</div>
 
 					<div className="relative">
-						<div className="bg-[#1a1a2e80] relative backdrop-blur-[10px] rounded-2xl p-10 border border-[#f0f0f00d] z-[1]">
+						<AnimateOnScroll
+							animationClass="animate-progress-bar"
+							className="bg-[#1a1a2e80] relative backdrop-blur-[10px] rounded-2xl p-10 border border-[#f0f0f00d] z-[1]"
+						>
 							<div className="mb-8">
 								<h4 className="text-[1rem] font-semibold mb-5 text-silver">
 									Frontend
@@ -108,7 +112,7 @@ export const About = () => {
 								<div className="floating-shape shape2"></div>
 								<div className="floating-shape shape3"></div>
 							</div>
-						</div>
+						</AnimateOnScroll>
 					</div>
 				</div>
 			</section>

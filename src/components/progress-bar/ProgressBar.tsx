@@ -8,7 +8,7 @@ export const ProgressBar = (props: IProgressBarProps) => {
 	return (
 		<div className="h-1.5 bg-[#f0f0f019] rounded-[50px] overflow-hidden">
 			<Box
-				className="h-full rounded-[50px] bg-[linear-gradient(90deg,var(--teal),var(--magenta))] w-full"
+				className="h-full rounded-[50px] bg-[linear-gradient(90deg,var(--teal),var(--magenta))] w-full progress-bar"
 				sx={{ maxWidth: `${progress}%` }}
 			/>
 		</div>

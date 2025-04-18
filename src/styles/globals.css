@@ -612,3 +612,8 @@
 .animate-experience-timeline .experience-milestone-line {
 	animation: growWidth 0.8s ease forwards;
 }
+
+.animate-progress-bar .progress-bar {
+	animation: growWidth 2s ease forwards;
+	transform-origin: left;
+}
