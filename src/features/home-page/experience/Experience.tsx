@@ -16,7 +16,7 @@ export const Experience = () => {
 							Experience
 						</div>
 						<h2 className="font-bold text-[1.8rem] md:text-4xl mb-4 tracking-[-0.5px]">
-							My professional
+							My professional&nbsp;
 							<span className="text-teal">journey</span>
 						</h2>
 						<p className="text-[1.1rem] text-silver w-full max-w-[600px] my-0 mx-auto">

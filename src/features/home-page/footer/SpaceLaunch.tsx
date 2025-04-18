@@ -4,6 +4,7 @@ import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { styled, keyframes } from "@mui/material";
 import { FaStar } from "react-icons/fa";
+import Link from "next/link";
 
 const twinkle = keyframes`
   0%, 100% {
@@ -51,10 +52,11 @@ const StarIcon = styled(FaStar)({
 });
 
 const RocketImage = styled(Image)({
-	transition: "transform 0.3s ease",
+	transition: "transform 0.3s ease, filter 0.3s ease",
 	cursor: "pointer",
 	"&:hover": {
-		transform: "scale(1.1)",
+		transform: "translateY(-10px)",
+		filter: "brightness(1.2) drop-shadow(0 0 10px orange)",
 	},
 	"&.launching": {
 		animation: `${launch} 1s forwards`,
@@ -126,10 +128,13 @@ export const SpaceLaunch = () => {
 			const threshold = 100; // pixels from bottom to trigger auto-scroll
 
 			// If we're near the bottom but not at the space launch section
-			if (scrollPosition > documentHeight - threshold && scrollPosition < spaceLaunchTop) {
+			if (
+				scrollPosition > documentHeight - threshold &&
+				scrollPosition < spaceLaunchTop
+			) {
 				window.scrollTo({
 					top: spaceLaunchTop - window.innerHeight,
-					behavior: "smooth"
+					behavior: "smooth",
 				});
 			}
 		};
@@ -141,7 +146,7 @@ export const SpaceLaunch = () => {
 	const handleLaunch = () => {
 		setIsLaunching(true);
 		setShowOverlay(true);
-		
+
 		// Start the scroll after a short delay to allow the rocket to move up
 		setTimeout(() => {
 			window.scrollTo({ top: 0, behavior: "smooth" });
@@ -159,17 +164,15 @@ export const SpaceLaunch = () => {
 	}
 
 	return (
-		<div 
+		<div
 			ref={spaceLaunchRef}
-			className="min-h-screen bg-gradient-to-b from-dark-charcoal to-black flex flex-col items-center justify-center relative overflow-hidden"
+			className="min-h-screen bg-charcoal flex flex-col items-center justify-center relative overflow-hidden"
 		>
-			{/* Content */}
 			<div className="relative z-10 text-center px-4">
-				<p className="text-silver text-lg mb-8">
-					Naturally the footer is the last thing on a page but since
-					you're here let's beam you back to the stars
+				<p className="text-silver mb-8 text-2xl">
+					Time to defy gravity 😌! Tap the rocket to rise again 😎.
 				</p>
-				<div className="relative flex justify-center items-center">
+				<div className="relative flex justify-center items-center rocket-container">
 					<RocketImage
 						src="/assets/svgs/rocket.svg"
 						alt="Rocket"
@@ -197,6 +200,14 @@ export const SpaceLaunch = () => {
 					</div>
 				</Overlay>
 			)}
+			<Link
+				href="https://storyset.com/rocket"
+				target="_blank"
+				rel="noopener noreferrer"
+				className="absolute bottom-3 text-sm"
+			>
+				Rocket illustrations by Storyset
+			</Link>
 		</div>
 	);
 };
