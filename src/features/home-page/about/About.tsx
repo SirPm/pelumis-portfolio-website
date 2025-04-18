@@ -25,14 +25,14 @@ export const About = () => {
 							elegant solutions
 						</h2>
 						<p className="text-[1.1rem] md:text-xl font-light mb-6">
-							I'm a full-stack developer specializing in creating
+							I'm a frontend engineer specializing in creating
 							exceptional digital experiences that combine
 							technical excellence with user-centered design.
 						</p>
 
 						<div className="mb-8">
 							<p className="mb-4 leading-[1.7] text-[1rem] text-silver opacity-90">
-								With over 5 years of industry experience, I've
+								With over 4 years of industry experience, I've
 								developed enterprise-grade applications with a
 								focus on accessibility, performance, and
 								scalability. My approach combines strategic
@@ -41,8 +41,9 @@ export const About = () => {
 							</p>
 							<p className="mb-4 leading-[1.7] text-[1rem] text-silver opacity-90">
 								I'm particularly passionate about making the web
-								accessible to everyone and creating B2B
-								solutions that transform how businesses operate.
+								accessible to everyone.
+								{/* and creating B2B
+								solutions that transform how businesses operate */}
 							</p>
 						</div>
 

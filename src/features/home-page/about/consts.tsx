@@ -8,7 +8,7 @@ import { ITechSkill } from "@/components/tech-skill/types";
 export const EXPERTISE_LIST: IExpertise[] = [
 	{
 		id: 1,
-		name: "Full Stack Development",
+		name: "Frontend Development",
 		icon: <LanguageRoundedIcon />,
 	},
 	{
@@ -55,21 +55,21 @@ export const BACK_END_TECH_SKILLS: ITechSkill[] = [
 	{
 		id: 1,
 		name: "Node.js",
-		progress: 90,
+		progress: 50,
 	},
 	{
 		id: 2,
 		name: "Express.js",
-		progress: 88,
+		progress: 50,
 	},
-	{
+	/* {
 		id: 3,
 		name: "GraphQL",
 		progress: 85,
-	},
+	}, */
 	{
 		id: 4,
 		name: "MongoDB",
-		progress: 80,
+		progress: 50,
 	},
 ];
