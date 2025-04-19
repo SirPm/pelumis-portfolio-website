@@ -21,6 +21,7 @@ import styles from "./Header.module.css";
 import Link from "next/link";
 import { AnimatedLogo } from "@/components/AnimatedLogo";
 
+// TODO: Add a link to the contact page when it's created
 // Navigation links array for reuse
 const navLinks = [
 	{ href: "#projects", text: "Projects" },
@@ -140,16 +141,14 @@ export const Header = () => {
 						&nbsp;and precision
 					</Title>
 					<TagLine>
-						Frontend developer specializing in&nbsp;
-						<span className="font-medium text-neon-pink">
-							B2B solutions
-						</span>
+						Frontend engineer crafting&nbsp;
+						<span className="font-medium">fast</span>, intuitive
+						interfaces through&nbsp;
+						<span className="font-medium">clean code</span>
 						&nbsp;and&nbsp;
-						<span className="font-medium text-matrix-green">
-							web applications
+						<span className="font-medium">
+							scalable design systems.
 						</span>
-						&nbsp; that deliver exceptional value and user
-						experience.
 					</TagLine>
 					<div className="flex flex-col w-full max-w-[70%] md:max-w-fit md:flex-row mt-8 gap-6">
 						<Button
@@ -159,7 +158,7 @@ export const Header = () => {
 							<Link href="#projects">View My Projects</Link>
 						</Button>
 						<Button
-							variant="secondary"
+							variant="tertiary"
 							className="w-full md:w-fit"
 						>
 							<Link href={`mailto:${MY_EMAIL}`}>

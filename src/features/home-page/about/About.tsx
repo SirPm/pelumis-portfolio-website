@@ -44,23 +44,23 @@ export const About = () => {
 							</p>
 							<p className="mb-4 leading-[1.7] text-[1rem] text-silver opacity-90">
 								I&apos;m particularly passionate about making
-								the web accessible to everyone.
-								{/* and creating B2B
-								solutions that transform how businesses operate */}
+								the web accessible to everyone and I pride
+								myself in being adept at using the right system
+								design and DSA when building out a solution.
 							</p>
 						</div>
 
 						<div className="">
-							<h3 className="text-[1.2rem] font-semibold mb-6 text-silver">
+							<h3 className="text-[1.2rem] font-bold mb-6 text-silver">
 								Areas of Expertise
 							</h3>
-							<div className="grid grid-cols-2 gap-6">
+							<div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
 								{EXPERTISE_LIST.map(({ id, name, icon }) => (
 									<div
 										key={id}
 										className="flex items-center gap-4"
 									>
-										<div className="flex items-center justify-center w-12 h-12 rounded-xl bg-[#0cffe119] text-teal">
+										<div className="flex items-center justify-center w-12 h-12 rounded-xl bg-[#0cffe119] text-teal shrink-0">
 											{icon}
 										</div>
 										<h4 className="text-[1rem] font-medium text-silver">

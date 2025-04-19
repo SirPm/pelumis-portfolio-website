@@ -1,3 +1,3 @@
 export interface IButtonProps {
-	variant: "primary" | "secondary";
+	variant: "primary" | "secondary" | "tertiary";
 }

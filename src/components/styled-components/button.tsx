@@ -21,26 +21,50 @@ export const Button = styled("button")<IButtonProps>`
 	${(props) =>
 		props.variant === "primary"
 			? `
-		background-color: var(--teal);
-		color: var(--dark-charcoal);
+				background-color: var(--teal);
+				color: var(--dark-charcoal);
 
-		&:hover {
-			background-color: #00e6ca;
-			transform: translateY(-2px);
-			box-shadow: 0 6px 15px rgba(12, 255, 225, 0.2);
-		}
-	`
+				&:hover {
+					background-color: #00e6ca;
+					transform: translateY(-2px);
+					box-shadow: 0 6px 15px rgba(12, 255, 225, 0.2);
+				}
+
+				&:active {
+					transform: translateY(0);
+				}
+			`
 			: props.variant === "secondary"
 			? `
-		background-color: transparent;
-		color: var(--silver);
-		border: 1px solid var(--silver);
+				background-color: transparent;
+				color: var(--silver);
+				border: 1px solid var(--silver);
 
-		&:hover {
-			border-color: var(--teal);
-			color: var(--teal);
-			transform: translateY(-2px);
-		}
-	`
+				&:hover {
+					border-color: var(--teal);
+					color: var(--teal);
+					transform: translateY(-2px);
+				}
+
+				&:active {
+					transform: translateY(0);
+				}
+			`
+			: props.variant === "tertiary"
+			? `
+				background: linear-gradient(90deg, #8B5CF6 0%, #EC4899 100%);
+				color: var(--silver);
+				border: none;
+
+				&:hover {
+					filter: brightness(1.1);
+					box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+					transform: translateY(-2px);
+				}
+
+				&:active {
+					transform: translateY(0);
+				}
+			`
 			: ""}
 `;
