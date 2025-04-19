@@ -38,6 +38,9 @@ export const metadata: Metadata = {
 		images: [OG_IMAGE],
 	},
 	manifest: "/manifest.json",
+	icons: {
+		icon: "/favicon.ico",
+	},
 };
 
 export default function RootLayout({
