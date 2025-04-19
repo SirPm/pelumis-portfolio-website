@@ -7,9 +7,36 @@ const nunito = Nunito({
 	variable: "--font-nunito",
 });
 
+const WEBSITE_TITLE = "Pelumi Odumosu";
+const WEBSITE_URL = "https://pelumiodumosu.vercel.app";
+const WEBSITE_DESCRIPTION =
+	"Pelumi Odumosu is a frontend engineer highly skilled at design systems with a passion for creating innovative and scalable solutions.";
+const OG_IMAGE = `${WEBSITE_URL}/og-image.png`;
+
 export const metadata: Metadata = {
-	title: "Pelumi's Portfolio Website",
-	description: "Pelumi Odumosu is a great software developer",
+	title: WEBSITE_TITLE,
+	description: WEBSITE_DESCRIPTION,
+	openGraph: {
+		type: "website",
+		url: WEBSITE_URL,
+		title: WEBSITE_TITLE,
+		description: WEBSITE_DESCRIPTION,
+		images: [
+			{
+				url: OG_IMAGE,
+				width: 1200,
+				height: 630,
+				alt: "Preview image description",
+			},
+		],
+	},
+	twitter: {
+		creator: "@OluwaPm",
+		card: "summary_large_image",
+		title: WEBSITE_TITLE,
+		description: WEBSITE_DESCRIPTION,
+		images: [OG_IMAGE],
+	},
 };
 
 export default function RootLayout({
