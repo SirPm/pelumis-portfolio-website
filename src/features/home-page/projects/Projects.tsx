@@ -21,8 +21,8 @@ export const Projects = () => {
 		) as ProjectCategory;
 		setActiveFilter(filterValue);
 		if (filterValue !== ProjectCategory.ALL) {
-			const filteredProjects = PROJECTS.filter(
-				(project) => project.category === filterValue
+			const filteredProjects = PROJECTS.filter((project) =>
+				project.categories.includes(filterValue)
 			);
 			setProjects(filteredProjects);
 		} else {
@@ -78,7 +78,7 @@ export const Projects = () => {
 								({
 									id,
 									name,
-									category,
+									categories,
 									image,
 									description,
 									techStack,
@@ -95,13 +95,24 @@ export const Projects = () => {
 												alt={`${name}'s screenshot`}
 												className="w-full h-full object-cover object-center transition-transform duration-500 ease-in-out transform hover:scale-[1.05] cursor-pointer"
 											/>
-											<div className="absolute top-4 right-4 bg-[#000000b3] text-teal py-1.5 px-3 rounded-sm text-sm font-semibold backdrop-blur-[5px]">
-												{
-													ProjectCategoryTextMap[
-														category
-													]
-												}
-											</div>
+											{categories
+												.slice(0, 2)
+												.map((category, index) => (
+													<div
+														key={index}
+														className={`absolute ${
+															index === 0
+																? "top-4"
+																: "top-14"
+														} right-4 bg-[#000000b3] text-teal py-1.5 px-3 rounded-sm text-sm font-semibold backdrop-blur-[5px]`}
+													>
+														{
+															ProjectCategoryTextMap[
+																category
+															]
+														}
+													</div>
+												))}
 										</div>
 										<div className="p-6 flex flex-col h-[300px]">
 											<h3 className="text-[1.3rem] font-semibold mb-3 text-silver">

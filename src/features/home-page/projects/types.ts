@@ -17,14 +17,10 @@ export interface IProjectCategory {
 export interface IProject {
 	id: string;
 	name: string;
-	category: ProjectCategory;
+	categories: ProjectCategory[];
 	image: string;
 	description: string;
 	techStack: string[];
-	metrics: {
-		value: string;
-		label: string;
-	}[];
 	link: string;
 	isFeatured?: boolean;
 	githubLink?: string;

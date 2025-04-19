@@ -68,12 +68,8 @@ export const PROJECTS: IProject[] = [
 		description:
 			"A financial management platform for Nigerian SMEs, featuring high-yield accounts, flexible credit, payment solutions, payroll, and on-demand pay via a unified dashboard. It boosts efficiency, cash flow, and growth.",
 		image: "/assets/pngs/b2b-earnipay.png",
-		category: ProjectCategory.B2B,
+		categories: [ProjectCategory.FINTECH, ProjectCategory.B2B],
 		techStack: ["React", "Redux", "Tailwind CSS"],
-		metrics: [
-			/* { value: "24%", label: "Increase in Client Efficiency" },
-			{ value: "3x", label: "ROI for Businesses" }, */
-		],
 		link: ProjectLink.EARNIPAY_B2B,
 		isFeatured: true,
 	},
@@ -83,22 +79,12 @@ export const PROJECTS: IProject[] = [
 		description:
 			"A no-code platform that simplifies website accessibility with AI-powered tools, ensuring ADA and WCAG compliance for inclusive user experiences, requiring minimal technical setup.",
 		image: "/assets/pngs/equally-ai.png",
-		category: ProjectCategory.ACCESSIBILITY,
+		categories: [ProjectCategory.ACCESSIBILITY],
 		techStack: [
 			"React",
 			"Redux Toolkit",
 			"TypeScript",
 			"styled-components",
-		],
-		metrics: [
-			/* {
-				value: "100%",
-				label: "WCAG Compliance",
-			},
-			{
-				value: "89%",
-				label: "User Satisfaction",
-			}, */
 		],
 		link: ProjectLink.EQUALLY_AI,
 		isFeatured: true,
@@ -109,18 +95,8 @@ export const PROJECTS: IProject[] = [
 		description:
 			"A platform for brand engagement, offering tools to create personalized image campaigns, automate email marketing, and streamline audience interactions, driving conversions and growth.",
 		image: "/assets/pngs/inbranded-design-builder.png",
-		category: ProjectCategory.SAAS,
+		categories: [ProjectCategory.SAAS],
 		techStack: ["React", "TypeScript", "Redux", "SCSS", "MUI"],
-		metrics: [
-			/* {
-				value: "100%",
-				label: "WCAG Compliance",
-			},
-			{
-				value: "89%",
-				label: "User Satisfaction",
-			}, */
-		],
 		link: ProjectLink.INBRANDED,
 		isFeatured: true,
 	},
@@ -130,9 +106,8 @@ export const PROJECTS: IProject[] = [
 		description:
 			"A responsive promo website for Earnipay, a fintech platform that allows employees to access their earned wages on demand, enhancing financial flexibility and wellness. And also for businesses to grow and scale.",
 		image: "/assets/pngs/earnipay-website.png",
-		category: ProjectCategory.UI_UX,
+		categories: [ProjectCategory.UI_UX],
 		techStack: ["React", "Tailwind CSS"],
-		metrics: [],
 		link: ProjectLink.EARNIPAY_WEBSITE,
 	},
 	{
@@ -141,9 +116,8 @@ export const PROJECTS: IProject[] = [
 		description:
 			"A movie list platform with a user-friendly interface and detailed movie information for movie enthusiasts.",
 		image: "/assets/pngs/pelzmovies.png",
-		category: ProjectCategory.UI_UX,
+		categories: [ProjectCategory.UI_UX],
 		techStack: ["React", "Redux", "SCSS"],
-		metrics: [],
 		link: ProjectLink.PELZ_MOVIES,
 		githubLink: GitHubLink.PELZ_MOVIES,
 	},
@@ -152,9 +126,8 @@ export const PROJECTS: IProject[] = [
 		name: "Altmall",
 		description: `An e-commerce platform offering a wide range of products with flexible "Buy Now, Pay Later" options at 0% interest, enabling affordable shopping and personalized sourcing for customers.`,
 		image: "/assets/pngs/altmall.png",
-		category: ProjectCategory.ECOMMERCE,
+		categories: [ProjectCategory.ECOMMERCE],
 		techStack: ["React", "Redux Toolkit", "styled-components", "MUI"],
-		metrics: [],
 		link: ProjectLink.ALT_MALL,
 	},
 ];
