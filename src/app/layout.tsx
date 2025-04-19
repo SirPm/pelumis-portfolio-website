@@ -7,7 +7,7 @@ const nunito = Nunito({
 	variable: "--font-nunito",
 });
 
-const WEBSITE_TITLE = "Pelumi Odumosu";
+const WEBSITE_TITLE = "Pelumi Odumosu: Frontend Engineer.";
 const WEBSITE_URL = "https://pelumiodumosu.vercel.app";
 const WEBSITE_DESCRIPTION =
 	"Pelumi Odumosu is a frontend engineer highly skilled at design systems with a passion for creating innovative and scalable solutions.";
