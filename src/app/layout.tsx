@@ -11,7 +11,7 @@ const WEBSITE_TITLE = "Pelumi Odumosu: Frontend Engineer.";
 const WEBSITE_URL = "https://pelumiodumosu.vercel.app";
 const WEBSITE_DESCRIPTION =
 	"Pelumi Odumosu is a frontend engineer highly skilled at design systems with a passion for creating innovative and scalable solutions.";
-const OG_IMAGE = `${WEBSITE_URL}/assets/pngs/og-image.png`;
+const OG_IMAGE = `/og-image.png`;
 
 export const metadata: Metadata = {
 	title: WEBSITE_TITLE,
