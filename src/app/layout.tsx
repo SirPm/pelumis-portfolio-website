@@ -12,7 +12,6 @@ const WEBSITE_URL = "https://pelumiodumosu.vercel.app";
 const WEBSITE_DESCRIPTION =
 	"Pelumi Odumosu is a frontend engineer highly skilled at design systems with a passion for creating innovative and scalable solutions.";
 const OG_IMAGE = `${WEBSITE_URL}/assets/pngs/og-image.png`;
-// const LOGO_ICON = `${WEBSITE_URL}/assets/svgs/logo.svg`;
 
 export const metadata: Metadata = {
 	title: WEBSITE_TITLE,
@@ -38,6 +37,7 @@ export const metadata: Metadata = {
 		description: WEBSITE_DESCRIPTION,
 		images: [OG_IMAGE],
 	},
+	manifest: "/manifest.json",
 };
 
 export default function RootLayout({
