@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect } from "react";
 import Link from "next/link";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
@@ -10,28 +10,14 @@ export const Footer = () => {
 	const [footerRef, isIntersecting] = useIntersectionObserver({
 		threshold: 0.1,
 		rootMargin: "50px 0px 0px 0px",
+		direction: "bottom",
 	});
-	const lastScrollY = useRef<number>(0);
-	const [scrollingDown, setScrollingDown] = useState(true);
 
-	// Track scroll direction
 	useEffect(() => {
-		const handleScroll = () => {
-			const currentScrollY = window.scrollY;
-			setScrollingDown(currentScrollY > lastScrollY.current);
-			lastScrollY.current = currentScrollY;
-		};
-
-		window.addEventListener("scroll", handleScroll);
-		return () => window.removeEventListener("scroll", handleScroll);
-	}, []);
-
-	// Scroll to footer only when scrolling down
-	useEffect(() => {
-		if (isIntersecting && scrollingDown && footerRef.current) {
+		if (isIntersecting && footerRef.current) {
 			footerRef.current.scrollIntoView({ behavior: "smooth" });
 		}
-	}, [isIntersecting, scrollingDown, footerRef]);
+	}, [isIntersecting, footerRef]);
 
 	return (
 		<footer
