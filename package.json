@@ -1,6 +1,19 @@
 {
-  "name": "pelumis-portfolio-website",
+  "name": "pelumi_odumosu",
+  "description": "Pelumi's Personal Website",
   "version": "0.1.0",
+  "author": {
+    "name": "Pelumi Odumosu",
+    "email": "odumosuoluwapm@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SirPm/pelumis-portfolio-website"
+  },
+  "keywords": [
+    "nextjs"
+  ],
+  "license": "MIT",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
