@@ -29,6 +29,7 @@ export const metadata: Metadata = {
 				alt: "Preview image description",
 			},
 		],
+		siteName: "Pelumi Odumosu",
 	},
 	twitter: {
 		creator: "@OluwaPm",
