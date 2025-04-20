@@ -44,6 +44,7 @@ export const Footer = () => {
 							target="_blank"
 							rel="noopener noreferrer"
 							className="hover:text-primary transition-colors"
+							title="View Pelumi's Github profile"
 						>
 							<FaGithub
 								size={24}
@@ -55,6 +56,7 @@ export const Footer = () => {
 							target="_blank"
 							rel="noopener noreferrer"
 							className="hover:text-primary transition-colors"
+							title="View Pelumi's LinkedIn profile"
 						>
 							<FaLinkedin
 								size={24}

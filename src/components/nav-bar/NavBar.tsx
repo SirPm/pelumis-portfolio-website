@@ -66,6 +66,7 @@ export const NavBar = () => {
 				<Link
 					href="/"
 					className="font-bold text-[1.25rem] text-silver no-underline flex items-center gap-2 cursor-pointer"
+					title="View homepage"
 				>
 					<AnimatedLogo />
 				</Link>
