@@ -63,7 +63,7 @@ export const Overlay = styled("div")<{ isOpen: boolean }>`
 export const Hamburger = styled.button`
 	display: none;
 	position: fixed;
-	top: 52px;
+	top: 35px;
 	right: 2rem;
 	width: 30px;
 	height: 20px;

@@ -62,7 +62,7 @@ export const NavBar = () => {
 			</Hamburger>
 
 			{/* Desktop Navigation Menu */}
-			<nav className="flex justify-between items-center pt-8 global-container">
+			<nav className="flex justify-between items-center pt-4 global-container">
 				<Link
 					href="/"
 					className="font-bold text-[1.25rem] text-silver no-underline flex items-center gap-2 cursor-pointer"
