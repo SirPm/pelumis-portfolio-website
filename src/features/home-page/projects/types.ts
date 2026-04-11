@@ -4,6 +4,7 @@ export enum ProjectCategory {
 	ACCESSIBILITY = "accessibility",
 	ECOMMERCE = "ecommerce",
 	FINTECH = "fintech",
+	HRTECH = "hrtech",
 	SAAS = "saas",
 	UI_UX = "ui/ux",
 }

@@ -6,11 +6,13 @@ export const ProjectCategoryTextMap: Record<ProjectCategory, string> = {
 	[ProjectCategory.ACCESSIBILITY]: "Accessibility",
 	[ProjectCategory.ECOMMERCE]: "E-commerce",
 	[ProjectCategory.FINTECH]: "Fintech",
+	[ProjectCategory.HRTECH]: "HR Tech",
 	[ProjectCategory.SAAS]: "SaaS",
 	[ProjectCategory.UI_UX]: "UI/UX",
 };
 
 export enum ProjectLink {
+	NETCHEX = "https://netchex.com",
 	EARNIPAY_B2B = "https://business.earnipay.com",
 	EQUALLY_AI = "https://equally.ai",
 	INBRANDED = "https://inbranded.co",
@@ -51,17 +53,33 @@ export const PROJECT_CATEGORIES: IProjectCategory[] = [
 	},
 	{
 		id: 6,
+		name: "HR Tech",
+		value: ProjectCategory.HRTECH,
+	},
+	{
+		id: 7,
 		name: "SaaS",
 		value: ProjectCategory.SAAS,
 	},
 	{
-		id: 7,
+		id: 8,
 		name: "UI/UX",
 		value: ProjectCategory.UI_UX,
 	},
 ];
 
 export const PROJECTS: IProject[] = [
+	{
+		id: "n2pqrx8wd17at",
+		name: "Netchex",
+		description:
+			"An HR and payroll platform featuring a workflow automation system for employee onboarding. Built configurable task scheduling, multi-layered approval flows with role-based skip permissions, and change request functionality for automated position and employee information updates.",
+		image: "/assets/pngs/netchex.png",
+		categories: [ProjectCategory.B2B, ProjectCategory.HRTECH],
+		techStack: ["React", "TypeScript", "Vite", "React Query", "Vitest"],
+		link: ProjectLink.NETCHEX,
+		isFeatured: true,
+	},
 	{
 		id: "m9mhxk4jc85ob",
 		name: "Earnipay",

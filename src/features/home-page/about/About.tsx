@@ -34,7 +34,7 @@ export const About = () => {
 
 						<div className="mb-8">
 							<p className="mb-4 leading-[1.7] text-[1rem] text-silver opacity-90">
-								With over 4 years of industry experience,
+								With over 5 years of industry experience,
 								I&apos;ve developed enterprise-grade
 								applications with a focus on accessibility,
 								performance, and scalability. My approach
