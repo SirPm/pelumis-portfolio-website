@@ -19,6 +19,7 @@ export enum ProjectLink {
 	EARNIPAY_WEBSITE = "https://earnipay.com",
 	PELZ_MOVIES = "https://pelzmovies.netlify.app",
 	ALT_MALL = "https://altmall.ng",
+	CHEDA = "https://cheda.io",
 }
 
 export enum GitHubLink {
@@ -147,5 +148,26 @@ export const PROJECTS: IProject[] = [
 		categories: [ProjectCategory.ECOMMERCE],
 		techStack: ["React", "Redux Toolkit", "styled-components", "MUI"],
 		link: ProjectLink.ALT_MALL,
+	},
+	{
+		id: "p3qr7s2yt91kv",
+		name: "Cheda",
+		description:
+			"A crypto-to-cash platform that converts USDT, USDC directly into Naira bank deposits — with the best market rates, zero hidden fees, and instant payouts secured by bank-grade encryption and 2FA.",
+		image: "/assets/pngs/cheda.png",
+		categories: [
+			ProjectCategory.FINTECH,
+			ProjectCategory.UI_UX,
+			ProjectCategory.SAAS,
+		],
+		techStack: [
+			"NextJS",
+			"TypeScript",
+			"Tailwind CSS",
+			"MUI",
+			"styled-components",
+		],
+		link: ProjectLink.CHEDA,
+		isFeatured: true,
 	},
 ];
